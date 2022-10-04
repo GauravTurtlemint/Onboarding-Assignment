@@ -12,7 +12,7 @@ import java.util.Optional;
 public class QuoteService {
 
     @Autowired
-    public QuoteRepository quoteRepository;
+    private QuoteRepository quoteRepository;
 
     public Quotes getQuoteById(String requestId){
         return quoteRepository.findByRequestId(requestId);

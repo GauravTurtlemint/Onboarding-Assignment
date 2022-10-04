@@ -13,7 +13,7 @@ import java.util.List;
 public class ThirdPartyService {
 
     @Autowired
-    public ThirdPartyQuoteRepository thirdPartyQuoteRepository;
+    private ThirdPartyQuoteRepository thirdPartyQuoteRepository;
 
     public List<Insurer> getPremiums(VechicleDetails vechicleDetails){
         return thirdPartyQuoteRepository.findAllByMakeAndModelAndVertical(vechicleDetails.getMake(), vechicleDetails.getModel(), vechicleDetails.getVertical()).getSupportedInsurers();

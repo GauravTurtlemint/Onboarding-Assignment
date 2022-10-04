@@ -15,13 +15,13 @@ import java.util.*;
 public class QuoteController {
 
     @Autowired
-    public QuoteRepository quoteRepository;
+    private QuoteRepository quoteRepository;
 
     @Autowired
-    public QuoteService quoteService;
+    private QuoteService quoteService;
 
     @Autowired
-    public ThirdPartyService thirdPartyService;
+    private ThirdPartyService thirdPartyService;
 
     @GetMapping("/{requestId}")
     public Quotes getQuote(@PathVariable String requestId){

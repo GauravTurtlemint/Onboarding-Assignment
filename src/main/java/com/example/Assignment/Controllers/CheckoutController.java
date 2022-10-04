@@ -16,7 +16,7 @@ import java.util.List;
 public class CheckoutController {
 
     @Autowired
-    public CheckoutService checkoutService;
+    private CheckoutService checkoutService;
 
     @GetMapping("/checkout")
     public List<Checkout> getAllCheckouts(){
